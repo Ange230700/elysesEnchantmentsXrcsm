@@ -9,7 +9,8 @@
  * @returns {number} the card
  */
 export function getItem(cards, position) {
-  throw new Error('Implement the getItem function');
+  return cards[position];
+  // // throw new Error('Implement the getItem function');
 }
 
 /**
@@ -22,7 +23,9 @@ export function getItem(cards, position) {
  * @returns {number[]} the cards with the change applied
  */
 export function setItem(cards, position, replacementCard) {
-  throw new Error('Implement the setItem function');
+  cards[position] = replacementCard;
+  return cards;
+  // // throw new Error('Implement the setItem function');
 }
 
 /**
@@ -34,7 +37,9 @@ export function setItem(cards, position, replacementCard) {
  * @returns {number[]} the cards with the newCard applied
  */
 export function insertItemAtTop(cards, newCard) {
-  throw new Error('Implement the insertItemAtTop function');
+  cards.push(newCard);
+  return cards;
+  // // throw new Error('Implement the insertItemAtTop function');
 }
 
 /**
@@ -46,7 +51,9 @@ export function insertItemAtTop(cards, newCard) {
  * @returns {number[]} the cards without the removed card
  */
 export function removeItem(cards, position) {
-  throw new Error('Implement the removeItem function');
+  cards.splice(position, 1); // * Trying to remove the card at index position
+  return cards;
+  // // throw new Error('Implement the removeItem function');
 }
 
 /**
@@ -57,7 +64,9 @@ export function removeItem(cards, position) {
  * @returns {number[]} the cards without the removed card
  */
 export function removeItemFromTop(cards) {
-  throw new Error('Implement the removeItemFromTop function');
+  cards.pop();
+  return cards;
+  // // throw new Error('Implement the removeItemFromTop function');
 }
 
 /**
@@ -69,7 +78,9 @@ export function removeItemFromTop(cards) {
  * @returns {number[]} the cards including the new card
  */
 export function insertItemAtBottom(cards, newCard) {
-  throw new Error('Implement the insertItemAtBottom function');
+  cards.unshift(newCard);
+  return cards;
+  // // throw new Error('Implement the insertItemAtBottom function');
 }
 
 /**
@@ -80,7 +91,9 @@ export function insertItemAtBottom(cards, newCard) {
  * @returns {number[]} the cards without the removed card
  */
 export function removeItemAtBottom(cards) {
-  throw new Error('Implement the removeItemAtBottom function');
+  cards.shift();
+  return cards;
+  // // throw new Error('Implement the removeItemAtBottom function');
 }
 
 /**
@@ -92,5 +105,6 @@ export function removeItemAtBottom(cards) {
  * @returns {boolean} true if there are exactly stackSize number of cards, false otherwise
  */
 export function checkSizeOfStack(cards, stackSize) {
-  throw new Error('Implement the checkSizeOfStack function');
+  return cards.length === stackSize;
+  // // throw new Error('Implement the checkSizeOfStack function');
 }
